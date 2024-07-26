@@ -1,8 +1,14 @@
+from sys import argv
+
 def main() -> None:
-  flag_format = input("What is the format of the flag:\n> ")
-  bin_name = input("What is the format of the flag:\nExample: HTB{X}\n> ")
-  to_find = bin_name.split("X")[0]
-  trail = bin_name.split("X")[1]
+  if len(argv)!=3:
+    flag_format:str = input("What is the format of the flag:\n> ")
+    bin_name:str = input("What is the format of the flag:\nExample: HTB{X}\n> ")
+  else:
+    flag_format:str = sys.argv[1]
+    bin_name:str = sys.argv[2]
+  to_find:str = bin_name.split("X")[0]
+  trail:str = bin_name.split("X")[1]
   try:
     with open(bin_name, "r") as bin:
       try:
