@@ -6,7 +6,7 @@ def main() -> None:
   try:
     with open(bin_name, "r") as bin:
       try:
-        print(bin_name[bin_name.index(to_find):bin_name.index(trail)])
+        print(bin.read()[bin_name.index(to_find):bin_name.index(trail)])
       except ValueError:
         print("Flag not found")
         exit()
