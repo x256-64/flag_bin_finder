@@ -5,6 +5,13 @@ def main() -> None:
   trail = bin_name.split("X")[1]
   try:
     with open(bin_name, "r") as bin:
+      try:
+        print(bin_name[bin_name.index(to_find):bin_name.index(trail)])
+      except ValueError:
+        print("Flag not found")
+        exit()
+  except FileNotFoundError:
+    print("The binary was not found")
       
 
 if __name__=="__main__":
