@@ -1,4 +1,4 @@
-from sys import argv
+ilfrom sys import argv
 
 def main() -> None:
   if len(argv)!=3:
@@ -7,8 +7,8 @@ def main() -> None:
   else:
     flag_format:str = argv[1]
     bin_name:str = argv[2]
-  to_find:str = bin_name.split("X")[0]
-  trail:str = bin_name.split("X")[1]
+  to_find:str = flag_format.split("X")[0]
+  trail:str = flag_format.split("X")[1]
   try:
     with open(bin_name, "r") as bin:
       try:
