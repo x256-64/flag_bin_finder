@@ -13,7 +13,7 @@ def main() -> None:
     with open(bin_name, "r") as bin:
       try:
         data:str = bin.read()
-        print(data[data.index(to_find):data.index(trail)+1])
+        print(f"Flag: {data[data.index(to_find):data.index(trail)+1]}")
       except ValueError:
         print("Flag not found")
         exit()
