@@ -1,4 +1,4 @@
-ilfrom sys import argv
+from sys import argv
 
 def main() -> None:
   if len(argv)!=3:
