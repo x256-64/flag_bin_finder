@@ -2,8 +2,8 @@ from sys import argv
 
 def main() -> None:
   if len(argv)!=3:
-    flag_format:str = input("What is the format of the flag:\n> ")
-    bin_name:str = input("What is the format of the flag:\nExample: HTB{X}\n> ")
+    flag_format:str = input("What is the format of the flag:\nExample: HTB{X}\n> ")
+    bin_name:str = input("What is the name of the binary?\n> ")
   else:
     flag_format:str = argv[1]
     bin_name:str = argv[2]
